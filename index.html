@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGOSA — Association of Ghanaian Students in Algeria</title>
+  <meta name="description" content="AGOSA brings together Ghanaian scholarship students across Algeria — supporting each other through every challenge." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- PARTICLES -->
+  <canvas id="particles" class="particles-canvas"></canvas>
+
+  <!-- ═══════════════════════════════════════ NAV ═══ -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#" class="nav-brand">
+        <img src="logo.jpeg" alt="AGOSA" class="nav-logo" onerror="this.style.display='none'">
+        <span class="nav-brand-text">AGOSA</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#board">Board</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#donate" class="nav-donate">Donate</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#board">Board</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-content fade-up">
+        <div class="hero-eyebrow">
+          <span class="pulse-dot"></span>
+          Est. 2006 · Algiers, Algeria
+        </div>
+        <h1 class="hero-title">
+          Excellence<br>
+          <em>Unity.</em><br>
+          Service.
+        </h1>
+        <p class="hero-sub">AGOSA unites Ghanaian scholarship students across Algeria — a community of scholars, friends, and future leaders who lift each other from day one.</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-gold">Become a Member</a>
+          <a href="#donate" class="btn btn-outline">Donate →</a>
+        </div>
+      </div>
+      <div class="hero-stats fade-up delay-2">
+        <div class="stat-card">
+          <strong class="counter" data-target="2500">0</strong>
+          <span>Alumni Worldwide</span>
+        </div>
+        <div class="stat-card">
+          <strong class="counter" data-target="200">0</strong>
+          <span>Current students</span>
+        </div>
+        <div class="stat-card">
+          <strong class="counter" data-target="48">0</strong>
+          <span>Projects Completed</span>
+        </div>
+        <div class="stat-card">
+          <strong class="counter" data-target="19">0</strong>
+          <span>Years of Legacy</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ ABOUT ═══ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label fade-up">Who We Are</div>
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <h2 class="section-title">Far from home.<br>Never alone.</h2>
+          <p>AGOSA was born from a simple truth: navigating a foreign country, a new language, and a rigorous academic system is hard enough — but it's far easier together. Founded in 2006 by a determined group of Ghanaian scholarship students in Algiers, we've grown into a national community representing students across Algeria's finest universities.</p>
+          <p>From engineering labs in Constantine to medical halls in Oran, every Ghanaian scholar on Algerian soil is part of this family.</p>
+          <a href="https://docs.google.com/document/u/2/d/e/2PACX-1vQXEOukQ5JAWsHygpLDezE7iu78QJHXJKiuhMfcQWyLvU4qaBUNO5hpXkYpQiQRMrY2sFF3xDL1yCCJ/pub" target="_blank" class="btn btn-gold" style="margin-top:2rem">Read Our Constitution →</a>
+        </div>
+        <div class="values-grid fade-up delay-1">
+          <div class="value-card glass-card">
+            <div class="value-icon">🤝</div>
+            <h4>Welfare &amp; Welcome</h4>
+            <p>Airport pickups, housing guidance, and a community from day one.</p>
+          </div>
+          <div class="value-card glass-card">
+            <div class="value-icon">📚</div>
+            <h4>Academic Support</h4>
+            <p>Peer tutoring, past papers, and language transition guidance.</p>
+          </div>
+          <div class="value-card glass-card">
+            <div class="value-icon">🇬🇭</div>
+            <h4>Culture &amp; Identity</h4>
+            <p>Independence Day celebrations, cuisine nights, and traditions that keep home close.</p>
+          </div>
+          <div class="value-card glass-card">
+            <div class="value-icon">🏛️</div>
+            <h4>Liaison &amp; Advocacy</h4>
+            <p>A direct line to the Ghana Embassy and scholarship administrators.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ HISTORY ═══ -->
+  <section class="history section" id="history">
+    <div class="container">
+      <div class="section-label fade-up">Our Journey</div>
+      <h2 class="section-title fade-up">A Timeline of<br><em>Milestones</em></h2>
+      <div class="timeline">
+        <div class="tl-item fade-up">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2006</div>
+          <div class="tl-card glass-card">
+            <h4>AGOSA Founded</h4>
+            <p>A small group of Ghanaian scholarship students in Algiers establish the association to support new arrivals and advocate for members.</p>
+          </div>
+        </div>
+        <div class="tl-item fade-up delay-1">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2010</div>
+          <div class="tl-card glass-card">
+            <h4>Embassy Recognition</h4>
+            <p>AGOSA is formally recognized by the Ghana Embassy in Algiers as the official student liaison body.</p>
+          </div>
+        </div>
+        <div class="tl-item fade-up delay-2">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2014</div>
+          <div class="tl-card glass-card">
+            <h4>Chapters Expand</h4>
+            <p>Constantine and Oran chapters officially open, extending AGOSA's reach to universities across Algeria.</p>
+          </div>
+        </div>
+        <div class="tl-item fade-up delay-3">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2018</div>
+          <div class="tl-card glass-card">
+            <h4>Emergency Support Fund</h4>
+            <p>Members collectively establish a welfare fund to assist students during medical or financial hardship.</p>
+          </div>
+        </div>
+        <div class="tl-item fade-up delay-4">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-card glass-card">
+            <h4>2,500+ Members</h4>
+            <p>AGOSA reaches a landmark membership milestone, now representing Ghanaian scholars across 30+ Algerian universities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ PROGRAMS ═══ -->
+  <section class="programs section" id="programs">
+    <div class="container">
+      <div class="section-label fade-up">What We Run</div>
+      <h2 class="section-title fade-up">Programs Built Around<br><em>Real Student Needs</em></h2>
+      <div class="programs-grid">
+        <div class="program-card glass-card fade-up">
+          <div class="program-tag tag-gold">Onboarding</div>
+          <h3>New Arrivals Program</h3>
+          <p>Airport reception, SIM cards, temporary housing contacts, and a welcome pack — so no student faces their first week alone.</p>
+          <div class="program-bar"><div class="program-bar-fill" style="width:90%"></div></div>
+          <span class="program-bar-label">Active · 90% capacity</span>
+        </div>
+        <div class="program-card glass-card fade-up delay-1">
+          <div class="program-tag tag-blue">Academics</div>
+          <h3>Peer Mentorship</h3>
+          <p>Senior students paired with first-years in similar fields, offering guidance on registration, language, and exam prep.</p>
+          <div class="program-bar"><div class="program-bar-fill" style="width:75%"></div></div>
+          <span class="program-bar-label">Active · 75% enrolled</span>
+        </div>
+        <div class="program-card glass-card fade-up delay-2">
+          <div class="program-tag tag-red">Welfare</div>
+          <h3>Emergency Support Fund</h3>
+          <p>A member-funded pool providing quick, discreet help during medical emergencies or unexpected hardship.</p>
+          <div class="program-bar"><div class="program-bar-fill" style="width:60%"></div></div>
+          <span class="program-bar-label">Active · 60% funded</span>
+        </div>
+        <div class="program-card glass-card fade-up">
+          <div class="program-tag tag-gold">Culture</div>
+          <h3>Ghana Day Algiers</h3>
+          <p>An annual celebration of Ghanaian food, music, and dress — open to the entire international student community.</p>
+          <div class="program-bar"><div class="program-bar-fill" style="width:100%"></div></div>
+          <span class="program-bar-label">Annual · Completed</span>
+        </div>
+        <div class="program-card glass-card fade-up delay-1">
+          <div class="program-tag tag-blue">Liaison</div>
+          <h3>Embassy Relations</h3>
+          <p>Regular dialogue with the Ghana Embassy and Algerian scholarship bodies on stipend, visa, and renewal concerns.</p>
+          <div class="program-bar"><div class="program-bar-fill" style="width:85%"></div></div>
+          <span class="program-bar-label">Ongoing · 85% resolved</span>
+        </div>
+        <div class="program-card glass-card fade-up delay-2">
+          <div class="program-tag tag-red">Growth</div>
+          <h3>Skills &amp; Careers Series</h3>
+          <p>Workshops on CVs, research, and life after graduation — taught by AGOSA alumni working across Africa and the Gulf.</p>
+          <div class="program-bar"><div class="program-bar-fill" style="width:50%"></div></div>
+          <span class="program-bar-label">In progress · 50%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ EVENTS ═══ -->
+  <section class="events section" id="events">
+    <div class="container">
+      <div class="section-label fade-up">Calendar</div>
+      <h2 class="section-title fade-up">What's On<br><em>This Year</em></h2>
+      <div class="events-grid">
+        <div class="event-card glass-card fade-up">
+          <div class="event-date">
+            <span class="event-day">15</span>
+            <span class="event-month">Nov</span>
+          </div>
+          <div class="event-info">
+            <span class="event-tag">Orientation</span>
+            <h4>Welcome Orientation — Algiers</h4>
+            <p>Briefing for newly arrived scholarship students on housing, registration, and embassy procedures.</p>
+            <div class="event-meta">📍 Algiers </div>
+          </div>
+        </div>
+        <div class="event-card glass-card fade-up delay-1">
+          <div class="event-date">
+            <span class="event-day">06</span>
+            <span class="event-month">Mar</span>
+          </div>
+          <div class="event-info">
+            <span class="event-tag">National</span>
+            <h4>Independence Day Celebration</h4>
+            <p>Students, alumni, and staff mark Ghana's independence with parades and cultural displays.</p>
+            <div class="event-meta">📍 Ghana Embassy, Algiers</div>
+          </div>
+        </div>
+        <div class="event-card glass-card fade-up delay-2">
+          <div class="event-date">
+            <span class="event-day">20</span>
+            <span class="event-month">May</span>
+          </div>
+          <div class="event-info">
+            <span class="event-tag">Assembly</span>
+            <h4>Mid-Year General Assembly</h4>
+            <p>All members convene to review board activities and vote on the year's budget.</p>
+          </div>
+        </div>
+        <div class="event-card glass-card fade-up delay-3">
+          <div class="event-date">
+            <span class="event-day">12</span>
+            <span class="event-month">Jun</span>
+          </div>
+          <div class="event-info">
+            <span class="event-tag">Sports</span>
+            <h4>Summer Sports Festival</h4>
+            <p>Football, volleyball, athletics, and alumni networking across all three chapters.</p>
+            <div class="event-meta">📍 Algiers Sports Complex</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ GALLERY ═══ -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-label fade-up">Moments</div>
+      <h2 class="section-title fade-up">Life in <em>AGOSA</em></h2>
+      <div class="gallery-filters fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+        <button class="filter-btn" data-filter="culture">Culture</button>
+      </div>
+      <div class="gallery-grid">
+
+        <!-- Row 1: 3 equal columns -->
+        <div class="gallery-item fade-up" data-cat="events">
+          <img src="stud at alg emb gh.jpeg" alt="Welcome Orientation" loading="lazy">
+          <div class="gallery-overlay"><span>Welcome Orientation-Gh 2025</span></div>
+        </div>
+        <div class="gallery-item fade-up delay-1" data-cat="culture">
+          <img src="stud at alg zera.jpeg" alt="Ghana Day" loading="lazy">
+          <div class="gallery-overlay"><span>Students orientation-Algiers Nov 2025</span></div>
+        </div>
+        <div class="gallery-item fade-up delay-2" data-cat="sports">
+          <img src="stud selfie.jpeg" alt="Sports Festival" loading="lazy">
+        </div>
+
+        <!-- Row 2: wide left + narrow right -->
+        <div class="gallery-item g-wide fade-up" data-cat="events">
+          <img src="agosa-new-exec26.jpeg" alt="General Assembly" loading="lazy">
+          <div class="gallery-overlay"><span>2026/2027 New Executive Board</span></div>
+        </div>
+        <div class="gallery-item fade-up delay-1" data-cat="culture">
+          <img src="stud at alg zera.jpeg" alt="Cultural Night" loading="lazy">
+          <div class="gallery-overlay"><span>Cultural Night 2025</span></div>
+        </div>
+
+        <!-- Row 3: narrow left + wide right -->
+        <div class="gallery-item fade-up" data-cat="sports">
+          <img src="stud at alg emb gh.jpeg" alt="Football Final" loading="lazy">
+        </div>
+        <div class="gallery-item g-wide fade-up delay-1" data-cat="events">
+          <img src="agosa-welf-comm26.jpeg" alt="2026/2027 Welfare Committee" loading="lazy">
+          <div class="gallery-overlay"><span>2026/2027 Welfare Committee</span></div>
+        </div>
+
+        <!-- Row 4: 3 equal columns -->
+        <div class="gallery-item fade-up" data-cat="culture">
+          <img src="stud at alg emb gh.jpeg" alt="Independence Day" loading="lazy">
+        </div>
+        <div class="gallery-item fade-up delay-1" data-cat="sports">
+          <img src="stud selfie.jpeg" alt="Summer Sports" loading="lazy">
+        </div>
+        <div class="gallery-item fade-up delay-2" data-cat="events">
+          <img src="stud at alg emb gh.jpeg" alt="Graduation" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <img id="lightboxImg" src="" alt="">
+      <p id="lightboxCaption"></p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ BOARD ═══ -->
+  <section class="board section" id="board">
+    <div class="container">
+      <div class="section-label fade-up">Leadership</div>
+      <h2 class="section-title fade-up">This Year's<br><em>Executive Board</em></h2>
+      <p class="section-sub fade-up">Elected annually by the general membership to represent every Ghanaian scholarship student in Algeria.</p>
+      <div class="board-grid">
+        <div class="board-card glass-card fade-up">
+          <div class="board-img-wrap">
+            <img src="agosa-pres-OT.jpeg" alt="President" class="board-img">
+            <div class="board-img-ring"></div>
+          </div>
+          <div class="board-info">
+            <h4>Mr. Prince Charles Otabil</h4>
+            <span class="board-role">President</span>
+          </div>
+        </div>
+        <div class="board-card glass-card fade-up delay-1">
+          <div class="board-img-wrap">
+            <img src="agosa-vp-eli.jpeg" alt="Vice President" class="board-img">
+            <div class="board-img-ring"></div>
+          </div>
+          <div class="board-info">
+            <h4>Mr. Emmanuel Eli</h4>
+            <span class="board-role">Vice President</span>
+          </div>
+        </div>
+        <div class="board-card glass-card fade-up delay-2">
+          <div class="board-img-wrap">
+            <img src="agosafinsec-freeman.png" alt="Financial Secretary" class="board-img">
+            <div class="board-img-ring"></div>
+          </div>
+          <div class="board-info">
+            <h4>Mr. Amoasi Frank</h4>
+            <span class="board-role">Financial Secretary</span>
+          </div>
+        </div>
+        <div class="board-card glass-card fade-up delay-3">
+          <div class="board-img-wrap">
+            <img src="orga-noah.jpeg" alt="Male Organizer" class="board-img">
+            <div class="board-img-ring"></div>
+          </div>
+          <div class="board-info">
+            <h4>Mr. Badohu M.K Noah</h4>
+            <span class="board-role">Male Organizer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ NEWS ═══ -->
+  <section class="news section" id="news">
+    <div class="container">
+      <div class="section-label fade-up">Latest</div>
+      <h2 class="section-title fade-up">News &amp; <em>Updates</em></h2>
+      <div class="news-grid">
+        <div class="news-card glass-card fade-up">
+          <div class="news-img-wrap news-img-collage">
+            <img src="agosa-pres-OT.jpeg" alt="President" loading="lazy" class="news-img collage-img collage-1">
+            <img src="agosa-vp-eli.jpeg" alt="Vice President" loading="lazy" class="collage-img collage-2">
+            <img src="agosafinsec-freeman.png" alt="Financial Secretary" loading="lazy" class="collage-img collage-3">
+            <img src="orga-noah.jpeg" alt="Male Organizer" loading="lazy" class="collage-img collage-4">
+            <span class="news-cat">Leadership</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">By AGOSA Board · June 2026</div>
+            <h4>New AGOSA Leaders Elected for the 2026/2027 Academic Year</h4>
+            <p>Members across all chapters have voted in a new executive board to lead AGOSA into the 2026/2027 academic year. The newly elected leaders — Prince Charles Otabil (President), Emmanuel Eli (VP), Amoasi Frank (Fin. Sec.), and Badohu M.K Noah (Male Organizer) — have pledged to strengthen welfare, academic support, and inter-chapter unity.</p>
+            <a href="article-new-leaders.html" class="news-link">Read More →</a>
+          </div>
+        </div>
+        <div class="news-card glass-card fade-up delay-1">
+          <div class="news-img-wrap">
+            <img src="stud at alg emb gh.jpeg" alt="News" loading="lazy" class="news-img">
+            <span class="news-cat">Onboarding</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">By AGOSA Board · September 2025</div>
+            <h4>New Students Arrive for the 2025/26 Academic Year</h4>
+            <p>AGOSA welcomed a fresh wave of Ghanaian scholarship students arriving in Algiers, Constantine, and Oran this September. Volunteers coordinated airport pickups, temporary housing, and orientation sessions to help every new arrival settle in smoothly before the start of classes.</p>
+            <a href="article-new-arrivals.html" class="news-link">Read More →</a>
+          </div>
+        </div>
+        <div class="news-card glass-card fade-up delay-2">
+          <div class="news-img-wrap">
+            <img src="agosa-ball-end1.jpeg" alt="News" loading="lazy" class="news-img">
+            <span class="news-cat">Sports</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">By AGOSA Board · May 2025</div>
+            <h4>Ghana Football Team Wins Inter-Countries Sports Tournament</h4>
+            <p>In one of the most electrifying finishes in AGOSA sporting history, Ghana defeated Nigeria in a fierce penalty shootout to claim the inter-countries tournament trophy. After a tense 1-1 draw at full time, Ghana held their nerve in the shootout to lift the cup to thunderous celebration from supporters across all chapters.</p>
+            <a href="article-football-cup.html" class="news-link">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ DONATE ═══ -->
+  <section class="donate section" id="donate">
+    <div class="container">
+      <div class="section-label fade-up">Support Us</div>
+      <h2 class="section-title fade-up">Invest in a<br><em>Scholar's Future</em></h2>
+      <p class="section-sub fade-up">Every contribution strengthens the community that supports Ghanaian students throughout their journey in Algeria.</p>
+      <div class="donate-grid">
+        <div class="donate-card glass-card fade-up">
+          <div class="donate-tier">Bronze</div>
+          <div class="donate-amount">$10<span>/month</span></div>
+          <ul class="donate-perks">
+            <li>✓ Support the Welfare Fund</li>
+            <li>✓ AGOSA Newsletter</li>
+            <li>✓ Recognition on website</li>
+          </ul>
+          <a href="mailto:agosaalg@gmail.com" class="btn btn-outline">Donate Bronze</a>
+        </div>
+        <div class="donate-card glass-card donate-featured fade-up delay-1">
+          <div class="donate-tier">Gold</div>
+          <div class="donate-amount">$50<span>/month</span></div>
+          <ul class="donate-perks">
+            <li>✓ All Bronze benefits</li>
+            <li>✓ Sponsor a New Arrival Kit</li>
+            <li>✓ Named scholarship credit</li>
+            <li>✓ Alumni network access</li>
+          </ul>
+          <a href="mailto:agosaalg@gmail.com" class="btn btn-gold">Donate Gold</a>
+        </div>
+        <div class="donate-card glass-card fade-up delay-2">
+          <div class="donate-tier">Platinum</div>
+          <div class="donate-amount">$200<span>/month</span></div>
+          <ul class="donate-perks">
+            <li>✓ All Gold benefits</li>
+            <li>✓ Board advisor status</li>
+            <li>✓ Annual impact report</li>
+            <li>✓ Events VIP access</li>
+          </ul>
+          <a href="mailto:agosaalg@gmail.com" class="btn btn-outline">Donate Platinum</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CONTACT ═══ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label fade-up">Get in Touch</div>
+      <h2 class="section-title fade-up">We'd Love to<br><em>Hear From You</em></h2>
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+  <div class="contact-item glass-card">
+    <span class="contact-icon">✉️</span>
+    <div>
+      <strong>Email</strong>
+      <a href="mailto:agosaalg@gmail.com">agosaalg@gmail.com</a>
+    </div>
+  </div>
+  <div class="contact-item glass-card">
+    <span class="contact-icon">📍</span>
+    <div>
+      <strong>Location</strong>
+      <p>Ghana Embassy Liaison Office, Algiers, Algeria</p>
+    </div>
+  </div>
+  <div class="contact-item glass-card">
+    <span class="contact-icon">🎬</span>
+    <div>
+      <strong>YouTube</strong>
+      <a href="https://www.youtube.com/@agosatv6974" target="_blank">@agosatv6974</a>
+    </div>
+  </div>
+  <div class="contact-item glass-card">
+    <span class="contact-icon">💬</span>
+    <div>
+      <strong>WhatsApp</strong>
+      <a href="https://wa.me/+233 54 409 7240" target="_blank">+213 XX XXX XXXX</a>
+    </div>
+  </div>
+  
+
+   
+        <form class="contact-form glass-card fade-up delay-1" onsubmit="handleForm(event)">
+          <h3>Send a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Send Message →</button>
+          <div class="form-success" id="formSuccess">✓ Message sent! We'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="logo.jpeg" alt="AGOSA" onerror="this.style.display='none'">
+            <strong>AGOSA</strong>
+          </div>
+          <p>Association of Ghanaian Students in Algeria. Uniting scholars, building futures, since 2006.</p>
+          <a href="https://www.youtube.com/@agosatv6974" target="_blank" class="footer-yt">▶ Watch on YouTube</a>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <a href="#about">About AGOSA</a>
+          <a href="#history">Our History</a>
+          <a href="#programs">Programs</a>
+          <a href="#events">Events</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+        <div class="footer-col">
+          <h5>Board</h5>
+          <a href="#board">Executive Board</a>
+          <a href="#news">News</a>
+          <a href="#donate">Donate</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Newsletter</h5>
+          <p style="font-size:13px;margin-bottom:12px;color:#9aa0b4">Stay updated with AGOSA news and events.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit" class="btn btn-gold btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 AGOSA — Association of Ghanaian Students in Algeria.</span>
+        <span>Unity &amp; Excellence.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

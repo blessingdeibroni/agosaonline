@@ -1,0 +1,98 @@
+/* ============================================================
+   ARTICLE PAGE STYLES — extends style.css
+   ============================================================ */
+
+.article-body {
+  background: var(--navy);
+}
+
+.header .btn-sm {
+  padding: 8px 18px;
+}
+
+.article-page {
+  padding: 140px 0 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.article-container {
+  max-width: 760px;
+}
+
+.article-cat {
+  position: static;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  font-family: var(--display);
+  font-size: clamp(30px, 4.5vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+
+.article-meta {
+  font-size: 13.5px;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.article-hero-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 40px;
+}
+
+.article-hero-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.article-hero-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-body-text p {
+  font-size: 16.5px;
+  color: var(--gray-light);
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+.article-body-text h3 {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 40px 0 16px;
+}
+.article-body-text strong {
+  color: var(--white);
+}
+
+.article-footer-nav {
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid var(--glass-border);
+}
+
+@media (max-width: 600px) {
+  .article-page { padding: 120px 0 70px; }
+  .article-hero-collage { aspect-ratio: 4/3; }
+}
