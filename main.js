@@ -117,29 +117,44 @@ const revealObs = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => revealObs.observe(el));
 
-/* ── Animated counters ── */
+/* ── FIX 1: Animated counters (threshold lowered to 0.2, added safety check) ── */
 const counters = document.querySelectorAll('.counter');
-const counterObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target;
-    const target = parseInt(el.dataset.target);
-    const suffix = el.textContent.replace(/[0-9]/g, '');
+let countersStarted = false;
+
+function startCounters() {
+  if (countersStarted) return;
+  countersStarted = true;
+  counters.forEach(el => {
+    const target = parseInt(el.dataset.target, 10);
+    if (isNaN(target)) return;
     let start = null;
     const duration = 1800;
     const step = ts => {
       if (!start) start = ts;
       const progress = Math.min((ts - start) / duration, 1);
       const ease = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(ease * target) + (target >= 1000 ? '+' : '+');
+      el.textContent = Math.floor(ease * target).toLocaleString() + '+';
       if (progress < 1) requestAnimationFrame(step);
       else el.textContent = target.toLocaleString() + '+';
     };
     requestAnimationFrame(step);
-    counterObs.unobserve(el);
   });
-}, { threshold: 0.5 });
-counters.forEach(c => counterObs.observe(c));
+}
+
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      startCounters();
+      counterObs.disconnect();
+    }
+  });
+}, { threshold: 0.2 });
+
+if (counters.length > 0) {
+  // Observe the section containing the counters (hero-stats)
+  const statSection = counters[0].closest('section') || counters[0].parentElement;
+  counterObs.observe(statSection);
+}
 
 /* ── Progress bars animate on scroll ── */
 const barObs = new IntersectionObserver(entries => {
@@ -207,17 +222,16 @@ document.querySelectorAll('.programs-grid, .board-grid, .news-grid, .donate-grid
   });
 });
 
-/* ── Contact form ── */
-function handleForm(e) {
-  e.preventDefault();
-  const success = document.getElementById('formSuccess');
-  success.classList.add('show');
-  e.target.reset();
-  setTimeout(() => success.classList.remove('show'), 5000);
-}
+/* ── FIX 3: Contact form via Formspree Ajax ── */
+// Initialized via CDN script in index.html — formId: xgojodzv
 
-/* ── Newsletter form ── */
+/* ── FIX 4: Newsletter form (mailto fallback) ── */
 function handleNewsletter(e) {
   e.preventDefault();
-  e.target.innerHTML = '<span style="color:var(--gold);font-size:13px;font-weight:600">✓ You\'re subscribed!</span>';
+  const input = e.target.querySelector('input[type="email"]');
+  const email = input ? input.value : '';
+  if (email) {
+    window.location.href = `mailto:agosaalg@gmail.com?subject=Newsletter%20Subscription&body=Please%20add%20me%20to%20the%20AGOSA%20newsletter%3A%20${encodeURIComponent(email)}`;
+  }
+  e.target.innerHTML = '<span style="color:var(--gold);font-size:13px;font-weight:600">✓ Thanks! We\'ll be in touch.</span>';
 }
