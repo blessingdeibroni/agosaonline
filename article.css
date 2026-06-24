@@ -53,6 +53,7 @@
   margin-bottom: 40px;
 }
 
+/* ── 4-photo collage (original 2×2) ── */
 .article-hero-collage {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -67,6 +68,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
+}
+
+/* ── 6-photo collage (3×2) ── */
+.article-hero-collage-6 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  aspect-ratio: 16/7;
 }
 
 .article-body-text p {
@@ -86,13 +95,68 @@
   color: var(--white);
 }
 
+/* ── Board profile cards (article page) ── */
+.article-board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 48px 0 0;
+}
+.article-board-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 28px 16px 22px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.article-board-card:hover {
+  border-color: rgba(212,175,55,0.35);
+  transform: translateY(-4px);
+}
+.article-board-card img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid var(--gold);
+  margin: 0 auto 14px;
+  display: block;
+}
+.article-board-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.article-board-card span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+
+/* ── Board grid on index: 3 columns for 6 members ── */
+.board-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
 .article-footer-nav {
   margin-top: 56px;
   padding-top: 36px;
   border-top: 1px solid var(--glass-border);
 }
 
+@media (max-width: 700px) {
+  .article-hero-collage-6 { grid-template-columns: repeat(2, 1fr); aspect-ratio: unset; }
+  .article-board-grid { grid-template-columns: repeat(2, 1fr); }
+  .board-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
 @media (max-width: 600px) {
   .article-page { padding: 120px 0 70px; }
   .article-hero-collage { aspect-ratio: 4/3; }
+  .article-board-grid { grid-template-columns: 1fr 1fr; }
 }
